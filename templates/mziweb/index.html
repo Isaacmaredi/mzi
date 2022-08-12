@@ -1,0 +1,278 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} | Home {% endblock title %}
+
+{% block content %}
+  <!-- slider Area Start-->
+  {% include 'partials/_alerts.html' %}
+  <div class="slider-area ">
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider slider-height d-flex align-items-center">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-xl-8 col-lg-7 col-md-8" >
+                        <div class="count-down-area pb-120">
+                            <div class="container">
+                                <div class="row justify-content-between">
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <!-- Counter Up -->
+                                        
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                    
+                                        <!-- Counter Up -->
+                                        <div class="single-counter active text-center">
+                                            <span class="counter">
+                                            {% for launch in launches %}
+                                                <ul>
+                                                    {% if forloop.last %}
+                                                <li>{{launch.days_to_launch}}</li> 
+                                                    {% endif %}
+                                                </ul>
+                                            {% endfor %}</span>
+                                            <p> Days to Launch </p>
+                                        </div>
+                                    </div>                 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Coun Down End -->
+                        <div class="hero__caption" >
+                            <span data-animation="fadeInLeft" data-delay=".1s" class="text-titlecase">Mzilikazi the Great - </span>
+                            
+                            <h1 data-animation="fadeInLeft" data-delay=".5s"> Book launch 
+                                {% for launch in launches %}
+                                <ul>
+                                    {% if forloop.last %}
+                                <li>{{launch.launch_date|date:'d F Y'}}</li> 
+                                    {% endif %}
+                                </ul>
+                                {% endfor %}
+                            </h1>
+                            <p data-animation="fadeInLeft" data-delay=".9s" >a remarkable warrior to have emerged out of the east coast of Nguni land!</p>
+                            <!-- Hero-btn -->
+                            <div class="hero__btn" data-animation="fadeInLeft" data-delay="1.1s">
+                                <a href="{%  url 'mziweb:about'%}" class="btn hero-btn">See More...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+        <!-- Single Slider -->
+        <div class="single-slider slider-height d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-7 col-md-8" >
+                       
+                        <div class="hero__caption">
+                            
+                            <span data-animation="fadeInLeft" data-delay=".1s">The Book!</span>
+                            <h1 data-animation="fadeInLeft" data-delay=".5s" >Mzilikazi the Great is a non-fiction offering about one Mzilikazi ka Matshobane</h1>
+                            
+                            <!-- Hero-btn -->
+                            <div class="hero__btn" data-animation="fadeInLeft" data-delay="1.1s">
+                                <a href="{%  url 'mziweb:about' %}" class="btn hero-btn">See More...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </div>
+</div>
+<!-- slider Area End-->
+<!--? Categories Area Start -->
+<!--? About Area Start-->
+
+<!-- About Area End-->
+<!--? Services Ara Start -->
+<div class="services-area section-padding1">
+    <div class="container">
+        <div class="row">
+            <div class="cl-xl-7 col-lg-8 col-md-10">
+                <!-- Section Tittle -->
+                <div class="section-tittle mb-70">
+                    <span>Maiden Book Launch Event</span>
+                    <h2>An Evolutionary Review of Black Education</h2>
+                </div> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-10">
+                <div class="single-services mb-100">
+                    <div class="services-img">
+                        <img src="{% static 'assets/img/gallery/nthebe_walie.png' %}" width="570" height="525"  alt="">
+                        </div>
+                        <div class="services-caption">
+                        <span>With Dr Mongane Wally Serote</span>
+                        <p><a href="#">A legenday South Afrcan poet and writer</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-10">
+                <div class="single-services mb-100">
+                    <div class="services-img">
+                        <img src="{% static 'assets/img/gallery/nthebe-pitika.png' %} " width="570" height="525" alt="">
+                        </div>
+                        <div class="services-caption">
+                        <span>With Prof Pitika Ntuli</span>
+                        <p><a href="#">An established and imminent poet, scholar and Professor of African history, folklore and anthropology </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-10">
+                <div class="single-services mb-100">
+                    <div class="services-img">
+                        <img src="{% static 'assets/img/gallery/nthebe-stix.png' %} " width="570" height="525" alt="">
+                        </div>
+                        <div class="services-caption">
+                        <span>With Sipho "Hotstix" Mabuse</span>
+                        <p><a href="#">An internationally acclaimed musician and song writer</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-10">
+                <div class="single-services mb-100">
+                    <div class="services-img">
+                        <img src="{% static 'assets/img/gallery/nthebe-zola.png' %} " alt="">
+                        </div>
+                        <div class="services-caption">
+                        <span>With Bonginkosi "Zola 7" Dlamin</span>
+                        <p><a href="#">Welknown South African actor and musician</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services Ara End -->
+<!--? Testimonial Start -->
+<div class="testimonial-area testimonial-padding" data-background="assets/img/gallery/section_bg04.jpg">
+    <div class="container ">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-10 col-lg-10 col-md-9">
+                <div class="h1-testimonial-active">
+                    <!-- Single Testimonial -->
+                    <div class="single-testimonial text-center">
+                        <!-- Testimonial Content -->
+                        <div class="testimonial-caption ">
+                            <div class="testimonial-top-cap">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="67px" height="49px">
+                                <path fill-rule="evenodd"  fill="rgb(240, 78, 60)"
+                                d="M57.053,48.209 L42.790,48.209 L52.299,29.242 L38.036,29.242 L38.036,0.790 L66.562,0.790 L66.562,29.242 L57.053,48.209 ZM4.755,48.209 L14.263,29.242 L0.000,29.242 L0.000,0.790 L28.527,0.790 L28.527,29.242 L19.018,48.209 L4.755,48.209 Z"/>
+                                </svg>
+                                <p> Testimonials and reviews  </p>
+                            </div>
+                            <!-- founder -->
+                            <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                                <div class="founder-img">
+                                    <img src="assets/img/gallery/Homepage_testi.png" alt="">
+                                </div>
+                                <div class="founder-text">
+                                    <span>Reviewer Name</span>
+                                    <p>Title or Designation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Testimonial -->
+                    <div class="single-testimonial text-center">
+                        <!-- Testimonial Content -->
+                        <div class="testimonial-caption ">
+                            <div class="testimonial-top-cap">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="67px" height="49px">
+                                <path fill-rule="evenodd"  fill="rgb(240, 78, 60)"
+                                d="M57.053,48.209 L42.790,48.209 L52.299,29.242 L38.036,29.242 L38.036,0.790 L66.562,0.790 L66.562,29.242 L57.053,48.209 ZM4.755,48.209 L14.263,29.242 L0.000,29.242 L0.000,0.790 L28.527,0.790 L28.527,29.242 L19.018,48.209 L4.755,48.209 Z"/>
+                                </svg>
+                                <p>Testimonials, Reviews and Comments  </p>
+                            </div>
+                            <!-- founder -->
+                            <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                                <div class="founder-img">
+                                    <img src="assets/img/gallery/Homepage_testi.png" alt="">
+                                </div>
+                                <div class="founder-text">
+                                    <span>Reviewr Name</span>
+                                    <p>Title or Designation </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+<!-- Coun Down Start -->
+<div class="count-down-area pb-120">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <!-- Counter Up -->
+                <div class="single-counter text-center">
+                    <span class="counter">100</span>
+                    <p>Number of reviews</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <!-- Counter Up -->
+                <div class="single-counter active text-center">
+                    <span class="counter">120</span>
+                    <p>Days to launch</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <!-- Counter Up -->
+                <div class="single-counter text-center">
+                    <span class="counter">200</span>
+                    <p>Testimonials </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <!-- Counter Up -->
+                <div class="single-counter text-center">
+                    <span class="counter">500</span>
+                    <p>Copies sold</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Coun Down End -->
+
+<!-- Brand Area Start -->
+<div class="brand-area pb-140">
+    <div class="container">
+        <div class="brand-active brand-border pb-40">
+            <div class="single-brand">
+                <img src="assets/img/gallery/brand1.png" alt="">
+            </div>
+            <div class="single-brand">
+                <img src="assets/img/gallery/brand2.png" alt="">
+            </div>
+            <div class="single-brand">
+                <img src="assets/img/gallery/brand3.png" alt="">
+            </div>
+            <div class="single-brand">
+                <img src="assets/img/gallery/brand4.png" alt="">
+            </div>
+            <div class="single-brand">
+                <img src="assets/img/gallery/brand2.png" alt="">
+            </div>
+            <div class="single-brand">
+                <img src="assets/img/gallery/brand5.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

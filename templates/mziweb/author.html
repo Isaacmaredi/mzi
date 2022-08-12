@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} | Author
+{% endblock title %}
+
+{% block content %}
+
+<!--? Hero Start -->
+<div class="slider-area2">
+    <div class="slider-height2 hero-overly2 d-flex align-items-center" >
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap hero-cap2 text-center">
+                        <h2>About the Author</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+<!--Author Profile -->
+<!--================Blog Area =================-->
+<section class="blog_area single-post-area section-padding">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 posts-list">
+            <div class="single-post">     
+                <h2>Nthebe Molope is my name ...</h2>
+            <div class="feature-img">
+                <img class="img-fluid" src="{% static 'assets/img/blog/author.jpg' %} " alt="">
+            </div>
+            <div class="blog_details">
+                
+                <ul class="blog-info-link mt-3 mb-4">
+                    <li><a href=""><i class="fa fa-envelope"></i>nthebe@mzilikazithegreat.org</a></li>
+                    <li><a href="#"><i class="fa fa-phone"></i>+27 0 76 928 5757</a></li>
+                </ul>
+                <p class="excert">
+                I am a fifty nine year old former teacher and consider myself a life student of African history, 
+                a subject which I am so passionate about. Mzilikazi the Great is my second offering since 
+                I starting tryin my hand in contributing to knowledge creation. 
+                The maiden book was <a href="{% url 'mziweb:mybook' %}"> <strong>An Evolutionary Review of Black Education</strong> </a>  and 
+                I am currently working on the third offering which could be ready by first quarter of 2024. I consider these books to be my small contribution to the global teaching world which I have not totally abandoned since I quit the classroom over thirty one years ago. 
+                </p>
+            <p>
+            My approach in writing is inspired by reading broadly, 
+            researching and establishing what is contested narratives. 
+            I am thus happy that I sustained this principle here and covered all the countries in which Mzilikazi had been as I tracked him. 
+            To give further credence to the story  a platform for weekly debates and a blog will be created where I shall interact with different people on the history of Africa. 
+            </p>
+            <div class="quote-wrapper">
+                <div class="quotes">
+                The production of this book could not have happened or been met with so much 
+                success had it not been for the financial injection that I received from 
+                Sport and Recreation Arts and Culture (SRAC) through the Mzansi Golden Awards initiative. 
+
+                </div>
+            </div>
+            <p>
+            There are different activities that are to be carried out to compliment the marketing and publicity of the book. 
+                These will include pre-launch activation. Advertising of launch and countdown. 
+            National and regional launch dates and venues. 
+            To keep abreast with all these activities it will be important to continue watching this space.
+            </p>
+            <p>
+
+            </p>
+        </div>
+        </div>
+        <div class="navigation-top">
+        <div class="d-sm-flex justify-content-between text-center">
+            
+            <ul class="social-icons">
+                <li><a href="https://web.facebook.com/nthebe.molope" target="_blank"><i class="fab fa-facebook-f text-primary"></i></a></li>
+                <li><a href="https://twitter.com/nthebe_molope" target ="_blank"><i class="fab fa-twitter text-info"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/nthebe-molope" target="_blank"><i class="fab fa-linkedin-in text danger"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube text-danger"></i></a></li>
+            </ul>
+        </div>
+        
+        </div>
+        
+        
+        <div class="comment-form">
+            <div class="hero__btn" >
+            <h2> <a href="{%  url 'contacts:contact-us' %}" class="btn hero-btn btn-info"> Leave a message </a></h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="blog_right_sidebar">
+        
+        <aside class="single_sidebar_widget post_category_widget">
+        
+            <h4 class="widget_title hero_caption">Channels - Where and How to Source the Book</h4>
+            <ul class="list cat-list">
+                <li>
+                    <a href="#" class="d-flex">
+                    <p>CNA</p>
+                    <p></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="d-flex">
+                    <p>Bargain Books</p>
+                    <p></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="d-flex">
+                    <p>Takealot </p>
+                    <p></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="www.amazon.com" class="d-flex">
+                    <p> Amazon </p>
+                    <p></p>
+                    </a>
+                </li>
+                <li>
+                    <p>Payments can be made at: </p>
+                    <a href="https://pay.yoco.com/r/4WLGBR" class="d-flex">
+                    <p> https://pay.yoco.com/r/4WLGBR</p>
+                    </a>
+                </li>
+                <div class="hero__btn" >
+                    <a href="{%  url 'mziweb:mybook'%}" class="btn hero-btn btn-info ">See More...</a>
+                </div>
+            </ul>
+        </aside>
+        
+        
+        
+        
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<!--================ Blog Area end =================-->
+<!-- About Area End-->
+
+{% endblock content %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} | My Books
+
+{% endblock title %}
+
+{% block content %}
+<div class="slider-area2" >
+    <div class="slider-height2 hero-overly2 d-flex align-items-center" >
+        <div class="container" >
+            <div class="row">
+                <div class="col-xl-12" >
+                    <div class="hero-cap hero-cap2 text-center" >
+                        <h2>An Evolutionary Review of Black Education</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="support-company-area pt-100 pb-100 section-bg fix" data-background="assets/img/gallery/section_bg02.jpg">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6">
+                <div class="support-location-img">
+                    <img src="{% static 'assets/img/about/nthebe_edu.jpg' %}" alt="">
+                </div>
+            </div>  
+            <div class="col-xl-6 col-lg-6">
+                <div class="right-caption">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle section-tittle2 mb-50">
+                        <strong>About my maiden book</strong>
+                    </h2>
+                    </div>
+                    <div class="blog_details">
+                        <p class="excert">The conceptualization and ultimate development of this book over five years ago.
+                             This was as I had also been crafting my maiden book <strong>An Evolutionary Review on Black Education</strong>. 
+                             Thus as the first book was nearing finality which” led to its launch in 2018, I took a  slight repose on Mzilikazi the Great, 
+                             though I continued to collate data and at times stumbled upon vital data on it.</p>
+                        <p class="mb-65"></p>
+                        <a href="{% url 'mziweb:author' %}" class="btn post-btn">More About the Author</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
