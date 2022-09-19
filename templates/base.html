@@ -1,256 +1,226 @@
 {% load static %}
-<!doctype html>
-<html class="no-js" lang="zxx">
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>MzilikaziTheGreat {% block title %}{% endblock title %} </title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="manifest" href="site.webmanifest">
-	<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}">
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<!-- CSS here -->
-	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
-	<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
-	<link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}">
-	<link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
-	<link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
-	<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
-	<link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
-	<link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
-	<link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
-	<link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
-	<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!-- Title -->
+    <title>Mzilikazi the Great {% block title %} {% endblock title %} </title>
 
-    
+    <!-- Favicon -->
+    <link rel="icon" href="{%  static 'img/core-img/favicon.ico' %} ">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
 </head>
 
-<body class="body-bg">
-<!--? Preloader Start -->
-<div id="preloader-active">
-    <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-inner position-relative">
-            <div class="preloader-circle"></div>
-            <div class="preloader-img pere-text">
-                <img src="{% static 'assets/img/logo/loder.jpg' %}" alt="">
-            </div>
+<body>
+
+
+    <!-- ##### Preloader ##### -->
+    <div id="preloader">
+        <div class="circle">
+            <img src="{% static 'img/logos/mzi_logo.png' %}" alt="">
         </div>
     </div>
-</div>
-<header>
-    <!-- Header Start -->
-    <div class="header-area">
-        <div class="main-header ">
-            <div class="header-top d-none d-lg-block">
-                <div class="container">
-                    <div class="col-xl-12">
-                        <div class="row d-flex justify-content-between align-items-center">
-                            <div class="header-info-left">
-                                <ul>  
-                                    <li>  <a href="mailto:nthebe@mzilikazithegreat.org"> <i class="far fa-envelope"></i> <span class="text-lowercase"> nthebe@mzilikazithegreat.org</span> </li></a>
-                                    
-                                </ul>  
-                            </div>
-                            <div class="header-info-right">
-                                <ul class="header-social">    
-                                    <li><a href="https://web.facebook.com/nthebe.molope" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="https://twitter.com/nthebe_molope" target ="_blank"  ><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/in/nthebe-molope" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"  target="_blank" ><i class="fab fa-instagram"></i></a></li>
-                                    <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                </ul>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Top Header Area -->
+        <div class="top-header">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100">
+                        <div class="top-header-content h-100 d-flex align-items-center justify-content-end">
+                            <!-- Next Events Countdown -->
+                            <div class="next-events-countdown d-flex align-items-center">
+                                <p >Coming Soon - Countdown to book launch!</p>
+                                <div class="events-cd" data-countdown="2022/08/30"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="header-bottom  header-sticky">
+        </div>
+
+        <!-- Navbar Area -->
+        <div class="faith-main-menu">
+            <div class="classy-nav-container breakpoint-off">
                 <div class="container">
-                    <div class="row align-items-center">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="faithNav">
+
                         <!-- Logo -->
-                        <div class="col-xl-2 col-lg-2">
-                            <div class="logo">
-                                <a href="index.html"><img src="{% static 'assets/img/logo/logo-old.png' %}" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-10 col-lg-10">
-                            <div class="menu-wrapper  d-flex align-items-center justify-content-end">
-                                <!-- Main-menu -->
-                                <div class="main-menu d-none d-lg-block">
-                                    <nav> 
-                                        <ul id="navigation">                                                                                          
-                                            <li><a href="{% url 'mziweb:home' %}">Home</a></li>
-                                            <li><a href="{% url 'mziweb:about' %}">About</a></li>
-                                            <li><a href="{% url 'mziweb:author' %}">About the Author</a></li>
-                                            <li><a href="{% url 'mziweb:mybook' %}">Other Books</a></li>
-                                            <!-- <li><a href="#">Blog</a></li> -->
-                                            <li><a href="{% url 'contacts:contact-us' %}">Contact us</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div> 
-                        <!-- Mobile Menu -->
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Header End -->
-</header>
+                        <a class="nav-brand" href="#"><img src="{% static 'img/core-img/logo.png'%} "  width="200" height="230" alt=""></a>
 
-{% block content %}
-  
-{% endblock content %}
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
 
-<footer>
-    <!--? Footer Start-->
-    <div class="footer-area section-bg" data-background="assets/img/gallery/footer_bg.jpg">
-        <div class="container">
-            <div class="footer-top footer-padding">
-                <div class="row d-flex justify-content-between">
-                    <div class="col-xl-3 col-lg-4 col-md-5 col-sm-8">
-                        <div class="single-footer-caption mb-50">
-                            <!-- logo -->
-                            <div class="footer-logo">
-                                <a href="index.html"><img src="{% static 'assets/img/logo/logo2_footer.png'%} " alt=""></a>
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                             </div>
-                            <div class="footer-tittle">
-                                <div class="footer-pera">
-                                    <p class="info1">  <a href="{% url 'contacts:contact-us' %}">Send your reviews or messages</a> </p>
-                                </div>
-                            </div>
-                            <div class="footer-number">
-                                
-                                <p> <a href="mailto:nthebe@mzilikazithegreat.org">  nthebe@mzilikazithegreat.org</a> </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Physical Address </h4>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
                                 <ul>
-                                    <li><a href="#">Johannesburg</a></li>
-                                    <li><a href="#">Gauteng</a></li>
-                                    <li><a href="#">South Africa</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Explore</h4>
-                                <ul>
-                                    <li><a href="{% url 'mziweb:home'%}">Home</a></li>
+                                    <li><a href="{% url 'mziweb:home' %}">Home</a></li>
                                     <li><a href="{% url 'mziweb:about' %}">About</a></li>
-                                    <li><a href="{% url 'mziweb:author' %}">About the Author</a></li>
+                                    <li><a href="{% url 'mziweb:author' %}">Author</a></li>
                                     <li><a href="{% url 'mziweb:mybook' %}">Other Books</a></li>
-                                    <li><a href="{% url 'contacts:contact-us' %}">Contact Us</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                   
+                                    <!-- <li><a href="#">Blog</a></li> -->
+                                    <li><a href="{% url 'contacts:contact-us' %}">Contact</a></li>
+                                    
+                        
                                 </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Check us out</h4>
-                                <div class="footer-pera">
-                                    <p class="info1">Enquire now about how to get a copy</p>
+
+                                <!-- Search Button -->
+                                <div class="search-btn">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
                                 </div>
-                            </div>
-                            <!-- Form -->
-                            <div class="footer-form">
-                                <div id="mc_embed_signup">
-                                    <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
-                                        <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
-                                        <div class="form-icon">
-                                            <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
-                                                SIGN UP
-                                            </button>
-                                        </div>
-                                        <div class="mt-10 info"></div>
-                                    </form>
+
+                                <!-- Donate Button -->
+                                <div class="donate-btn ">
+                                    <a href="https://pay.yoco.com/r/4WLGBR">Get your copy</a>
                                 </div>
+
                             </div>
+                            <!-- Nav End -->
                         </div>
-                    </div>
+                    </nav>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div class="row d-flex justify-content-between align-items-center">
-                    <div class="col-xl-9 col-lg-8">
-                        <div class="footer-copy-right">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Mzilikazi the Great | All rights reserved 
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    {% block content %}
+    
+    {% endblock content %}
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+    <!-- Main Footer Area -->
+        <div class="main-footer-area section-padding-100-0 bg-img foo-bg-overlay" style="background-image: url({% static 'img/bg-img/mzi-book-bg.jpg' %});">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="d-flex flex-wrap mb-100">
+                            <div class="footer-widget">
+                                <div class="widget-title">
+                                    <a href="#"><img src="{% static 'img/core-img/mzi_logo_bgdark.png' %}" alt=""></a>
+                                </div>
+                                <div class="footer-social-info">
+                                    <!-- <li><a href="https://web.facebook.com/nthebe.molope" target="_blank"><i class="fab fa-facebook-f"></i></a></li> -->
+                                    <!-- <li><a href="https://twitter.com/nthebe_molope" target ="_blank"  ><i class="fab fa-twitter"></i></a></li> -->
+                                    <!-- <li><a href="https://www.linkedin.com/in/nthebe-molope" target="_blank"><i class="fab fa-linkedin-in"></i></a></li> -->
+                                    <!-- <li><a href="#"  target="_blank" ><i class="fab fa-instagram"></i></a></li> -->
+                                    
+                                    <a href="https://www.linkedin.com/in/nthebe-molope" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    <a href="https://twitter.com/nthebe_molope" target ="_blank"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://web.facebook.com/nthebe.molope" target="_blank""><i class="fa fa-facebook"></i></a>
+                                    <!-- <li> <a href="#"><i class="fa fa-google-plus"></i></a></li> -->
+                                    <!-- <a href="#"><i class="fa fa-twitter"></i></a> -->
+                                </div>
+                            </div>
+                            <div class="copywrite-text">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy; &nbsp;<script>document.write(new Date().getFullYear());</script>  
+                                All rights reserved | Mizilikazi The Great <br> Template by  <a href="https://colorlib.com">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4">
-                        <!-- Footer Social -->
-                        <div class="footer-social f-right">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fas fa-globe"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <!-- Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget mb-100">
+                            <div class="widget-title">
+                                <h6>Contact Us</h6>
+                            </div>
+
+                            <!-- Single Contact Area -->
+                            <div class="single-contact-area mb-30">
+                                <p>Location:</p>
+                                <span>Johannesburg<br>Gauteng, South Africa </span>
+                            </div>
+
+                            <!-- Single Contact Area -->
+                            <div class="single-contact-area mb-30">
+                                <p>Phone:</p>
+                                <span>+27 (0) 76 928 5757 </span>
+                            </div>
+
+                            <!-- Single Contact Area -->
+                            <div class="single-contact-area mb-30">
+                                <p>Email: </p>
+                                <a href="mailto:nthebe@mzilikazithegreat.org" > <span> nthebe@mzilikazithegreat.org</span> </a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget mb-100">
+                            <div class="widget-title">
+                                <h6>Core Links</h6>
+                            </div>
+                            <nav>
+                                <ul class="useful-links">
+                                    <ul>
+                                        <li><a href="{% url 'mziweb:home' %}">Home</a></li>
+                                        <li><a href="{% url 'mziweb:about' %}">About</a></li>
+                                        <li><a href="{% url 'mziweb:author' %}">About the Author</a></li>
+                                        <li><a href="{% url 'mziweb:mybook' %}">Other Books</a></li>
+                                        <!-- <li><a href="#">Blog</a></li> -->
+                                        <li><a href="{% url 'contacts:contact-us' %}">Contact</a></li>
+                                    </ul>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget mb-100">
+                            <div class="widget-title">
+                                <h6>Not to be missed!</h6>
+                            </div>
+                            <p>This book is the second offering as the first book was 
+                               <a href="{% url 'mziweb:mybook' %}"> <span  style="color:#ac8a74; text-decoration:underline ">An Evolutionary Review on Black Education</span> </a>, which sold 300 copies on launch night at the then Scoobs Bookshop, at the Monte Casino, Johannesburg</p>
+                            <a href="#" class="btn faith-btn mt-70">Launch date coming soon!</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer End-->
-</footer>
-<!-- Scroll Up -->
-<div id="back-top" >
-    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-</div>
+    </footer>
+    <!-- ##### Footer Area Ends ##### -->
 
-    <!-- JS here -->
-
-    <script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
-    <!-- Jquery, Popper, Bootstrap -->
-    <script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
-    <script src="{% static 'assets/js/popper.min.js' %}"></script>
-    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
-    <!-- Jquery Mobile Menu -->
-    <script src="{% static 'assets/js/jquery.slicknav.min.js' %}"></script>
-
-    <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'assets/js/slick.min.js' %}"></script>
-    <!-- One Page, Animated-HeadLin -->
-    <script src="{% static 'assets/js/wow.min.js' %}"></script>
-    <script src="{% static 'assets/js/animated.headline.js' %}"></script>
-    <script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
-
-    <!-- Nice-select, sticky -->
-    <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
-    <script src="{% static 'assets/js/jquery.sticky.js' %}"></script>
-
-    <!-- counter , waypoint -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="{% static 'assets' %}/js/jquery.counterup.min.js"></script>
-    
-    <!-- contact js -->
-    <script src="{% static 'assets/js/contact.js' %}"></script>
-    <script src="{% static 'assets/js/jquery.form.js' %}"></script>
-    <script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
-    <script src="{% static 'assets/js/mail-script.js' %}"></script>
-    <script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
-    
-    <!-- Jquery Plugins, main Jquery -->	
-    <script src="{% static 'assets/js/plugins.js' %}"></script>
-    <script src="{% static 'assets/js/main.js' %}"></script>
-    <script src="{% static 'assets/js/custom.js' %}"></script>
-
-        
-    </body>
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'js/plugins/plugins.js' %}"></script>
+    <script src="{% static 'js/plugins/audioplayer.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'js/active.js' %}"></script>
+</body>
 </html>

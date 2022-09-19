@@ -5,128 +5,282 @@
 {% block title %} | Home {% endblock title %}
 
 {% block content %}
-  <!-- slider Area Start-->
-  {% include 'partials/_alerts.html' %}
-  <div class="slider-area ">
-    <div class="slider-active">
-        <!-- Single Slider -->
-        <div class="single-slider slider-height d-flex align-items-center">
-            <div class="container">
-                
-                <div class="row">
-                    <div class="col-xl-8 col-lg-7 col-md-8" >
-                        
-                        <!-- Coun Down End -->
-                        <div class="hero__caption" >
-                            <span data-animation="fadeInLeft" data-delay=".1s" class="text-titlecase">Mzilikazi the Great - </span>
-                            
-                            <h1 data-animation="fadeInLeft" data-delay=".5s"> Book Launch <br>
-                                Coming soon 
-                                <!-- {% for launch in launches %}
-                                <ul>
-                                    {% if forloop.last %}
-                                <li>{{launch.launch_date|date:'d F Y'}}</li> 
-                                    {% endif %}
-                                </ul>
-                                {% endfor %} -->
-                            </h1>
-                            <p data-animation="fadeInLeft" data-delay=".9s" >a remarkable warrior to have emerged out of the east coast of Nguni land!</p>
-                            <!-- Hero-btn -->
-                            <div class="hero__btn" data-animation="fadeInLeft" data-delay="1.1s">
-                                <a href="{%  url 'mziweb:about'%}" class="btn hero-btn">See More...</a>
-                            </div>
+<!-- slider Area Start-->
+{% include 'partials/_alerts.html' %}
+
+<!-- ##### Hero Area Start ##### -->
+<section class="hero-area">
+    <div class="hero-slides owl-carousel">
+        <!-- Single Hero Slide -->
+        <div class="single-hero-slide bg-img bg-overlay" style="background-image: url({% static 'img/bg-img/bg-2.jpg' %});">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-end">
+                    <div class="col-12 col-lg-7">
+                        <!-- Slides Content -->
+                        <div class="hero-slides-content">
+                            <h3 data-animation="fadeInUp" data-delay="300ms">Mzilikazi the Great</h3>
+                            <h2 data-animation="fadeInUp" data-delay="500ms">  a non-fiction offering ...</h2>
+                            <p data-animation="fadeInUp" data-delay="700ms">about one Mzilikazi ka Matshobane </p>
+                    
                         </div>
                     </div>
                 </div>
-            </div>          
+            </div>
+            <!-- Event Button -->
+            <div class="next-event-btn" data-animation="bounceInDown" data-delay="900ms">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-right">
+                            <a href="#" class="btn faith-btn active">Book Launch: To Be Announced Soon!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Single Slider -->
-        <div class="single-slider slider-height d-flex align-items-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-8 col-lg-7 col-md-8" >
-                       
-                        <div class="hero__caption">
-                            
-                            <span data-animation="fadeInLeft" data-delay=".1s">The Book!</span>
-                            <h1 data-animation="fadeInLeft" data-delay=".5s" >Mzilikazi the Great is a non-fiction offering about one Mzilikazi ka Matshobane</h1>
-                            
-                            <!-- Hero-btn -->
-                            <div class="hero__btn" data-animation="fadeInLeft" data-delay="1.1s">
-                                <a href="{%  url 'mziweb:about' %}" class="btn hero-btn">See More...</a>
-                            </div>
+
+        <!-- Single Hero Slide -->
+        <div class="single-hero-slide bg-img bg-overlay" style="background-image: url(static/img/bg-img/bg-1.jpg);">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-end">
+                    <div class="col-12 col-lg-7">
+                        <!-- Slides Content -->
+                        <div class="hero-slides-content"> <
+                            <h6 class="date" data-animation="fadeInUp" data-delay="100ms" class="donate-btn">Launch date coming soon!</h6>
+                            <h3 data-animation="fadeInUp" data-delay="300ms">Mzilikazi The Great</h3>
+                            <h2 data-animation="fadeInUp" data-delay="500ms">Telling the story of a great African warrior!</h2>
+                            <p data-animation="fadeInUp" data-delay="700ms">The book...</p>
                         </div>
                     </div>
                 </div>
-            </div>          
+            </div>
+            <!-- Event Button -->
+            <div class="next-event-btn" data-animation="bounceInDown" data-delay="900ms">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-right">
+                            <a href="#" class="btn faith-btn active">Launch date to be announced soon!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Hero Slide -->
+        <div class="single-hero-slide bg-img bg-overlay" style="background-image: url(static/img/bg-img/bg-3.jpg);">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 col-lg-7">
+                        <!-- Slides Content -->
+                        <div class="hero-slides-content">
+                            
+                            <h3 data-animation="fadeInUp" data-delay="300ms">Mzilikazi the Great - The Book</h3>
+                            <h2 data-animation="fadeInUp" data-delay="500ms">Launch date to be announced soon!</h2>
+                            <p data-animation="fadeInUp" data-delay="700ms">Make sure you arrange to get your copy then...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Event Button -->
+            <div class="next-event-btn" data-animation="bounceInDown" data-delay="900ms">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-right">
+                            <a href="#" class="btn faith-btn active">Book Launch to be confirmed soon!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<!-- slider Area End-->
-<!--? Categories Area Start -->
-<!--? About Area Start-->
+</section>
+<!-- ##### Hero Area End ##### -->
 
-<!-- About Area End-->
-<!--? Services Ara Start -->
-<div class="services-area section-padding1">
+<!-- ##### CTA Area Start ##### -->
+<div class="faith-cta-area">
     <div class="container">
         <div class="row">
-            <div class="cl-xl-7 col-lg-8 col-md-10">
-                <!-- Section Tittle -->
-                <div class="section-tittle mb-70">
-                    <span>Maiden Book Launch Event</span>
-                    <h2>An Evolutionary Review of Black Education</h2>
-                </div> 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-10">
-                <div class="single-services mb-100">
-                    <div class="services-img">
-                        <img src="{% static 'assets/img/gallery/nthebe_walie.png' %}" width="570" height="525"  alt="">
-                        </div>
-                        <div class="services-caption">
-                        <span>With Dr Mongane Wally Serote</span>
-                        <p><a href="#">A legenday South Afrcan poet and writer</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-10">
-                <div class="single-services mb-100">
-                    <div class="services-img">
-                        <img src="{% static 'assets/img/gallery/nthebe-pitika.png' %} " width="570" height="525" alt="">
-                        </div>
-                        <div class="services-caption">
-                        <span>With Prof Pitika Ntuli</span>
-                        <p><a href="#">An established and imminent poet, scholar and Professor of African history, folklore and anthropology </a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-10">
-                <div class="single-services mb-100">
-                    <div class="services-img">
-                        <img src="{% static 'assets/img/gallery/nthebe-stix.png' %} " width="570" height="525" alt="">
-                        </div>
-                        <div class="services-caption">
-                        <span>With Sipho "Hotstix" Mabuse</span>
-                        <p><a href="#">An internationally acclaimed musician and song writer</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-10">
-                <div class="single-services mb-100">
-                    <div class="services-img">
-                        <img src="{% static 'assets/img/gallery/nthebe-zola.png' %} " alt="">
-                        </div>
-                        <div class="services-caption">
-                        <span>With Bonginkosi "Zola 7" Dlamin</span>
-                        <p><a href="#">Welknown South African actor and musician</a></p>
-                    </div>
+            <div class="col-12">
+                <div class="cta-text d-flex justify-content-between align-items-center">
+                    <h5>Mzilikazi - a remarkable warrior to have emerged out of the east coast of Nguni land. </h5>
+                    <a href="#" class="btn faith-btn">get in touch for more info</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-- ##### CTA Area End ##### -->
+
+  <!-- ##### About Area Start ##### -->
+  <section class="faith-about-area section-padding-100-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="about-content">
+                    <img src="img/core-img/holy-star.png" alt="">
+                    <h2> Mzilikazi the Great <br></h2>
+                    <h6>The book is about a brave tactician who was also way ahead of his time as one of the things he initiated was a treaty with the Cape whereby he was trying to avoid conflict with the mixed breed group of the Griquas favourites of the Boers</h6>
+                    <br>
+                    <p class="pera-top">Mhlahlandlela was an important seat of power where Mzilikazi set up his Royal palace after moving from Ntabazinduna where he first arrived in Zimbabwe. It is also important to note that Mhlahlandlela had previously been established during his migratory times when he first settled along the banks of the Enzabuhlungu (Apies) River -
+                        where Pretoria was later established.</p>
+                     
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="about-content">
+                    <img src="img/core-img/holy-star.png" alt="">
+                    <h2> A Book for All ... <br></h2>
+                    <h6>The story in its movements touches different clans, “tribes” and nations and hopefully answers and plugs many gaps that may have been left open in the past.</h6>
+                    <br>
+                    <p class="pera-top">This book is unique as it straddles a variety of audiences. 
+                        It is relevant for schools, universities, historians and general public 
+                        who may have an interest in their recent past history which has been 
+                        largely presented from European viewpoint exclusively in the past. </p>
+                     
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### About Area End ##### -->
+
+
+<  <!-- ##### Donate Area Start ##### -->
+<section class="donate-our-charities section-padding-100 bg-img bg-overlay" style="background-image: url(static/img/bg-img/zambezi.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading white text-center mx-auto">
+                    <img src="img/core-img/cross.png" alt="">
+                    <h3>Known images of Mzilikazi the Man</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="donate-slides owl-carousel">
+
+                    <!-- Single Donate Slide Area -->
+                    <div class="single-donate-slide">
+                        <img src="{% static 'img/mzi/mzi1.jpg' %}"   alt="">
+                        <!-- Donate Content -->
+                        <div class="donate-content">
+                            
+                        </div>
+                        <!-- Donate Button -->
+                        <div class="donate-btn text-center">
+                            <!-- <a href="#" class="btn faith-btn active">Donate</a> -->
+                        </div>
+                    </div>
+
+                    <!-- Single Donate Slide Area -->
+                    <div class="single-donate-slide">
+                        <img src="{% static 'img/mzi/mzi2.jpg' %}" height="255" width="258.55" alt="">
+                        <!-- Donate Content -->
+                        <div class="donate-content">
+                            <!-- <h4>Teens Found</h4>
+                            <p>For the young</p> -->
+                        </div>
+                        <!-- Donate Button -->
+                        <div class="donate-btn text-center">
+                            <!-- <a href="#" class="btn faith-btn active">Donate</a> -->
+                        </div>
+                    </div>
+
+                    <!-- Single Donate Slide Area -->
+                    <div class="single-donate-slide">
+                        <img src="{% static 'img/mzi/mzi3.jpg' %}" height="255" width="258.55" alt="">
+                        <!-- Donate Content -->
+                        <div class="donate-content">
+                            <!-- <h4>Child Found</h4>
+                            <p>For the kids</p> -->
+                        </div>
+                        <!-- Donate Button -->
+                        <div class="donate-btn text-center">
+                            <!-- <a href="#" class="btn faith-btn active">Donate</a> -->
+                        </div>
+                    </div>
+
+                    <!-- Single Donate Slide Area -->
+                    <div class="single-donate-slide">
+                        <img src="{% static 'img/mzi/mzi4.jpg' %}" alt="">
+                        <!-- Donate Content -->
+                        <div class="donate-content">
+                            <!-- <h4>Church Building</h4>
+                            <p>Renovate the Church</p> -->
+                        </div>
+                        <!-- Donate Button -->
+                        <div class="donate-btn text-center">
+                            <!-- <a href="#" class="btn faith-btn active">Donate</a> -->
+                        </div>
+                    </div>
+
+                    <!-- Single Donate Slide Area -->
+                    <div class="single-donate-slide">
+                        <img src="{% static 'img/mzi/route.jpg' %}" alt="">
+                        <!-- Donate Content -->
+                        <div class="donate-content">
+                            <!-- <h4>Church Building</h4>
+                            <p>Renovate the Church</p> -->
+                        </div>
+                        <!-- Donate Button -->
+                        <div class="donate-btn text-center">
+                            <!-- <a href="#" class="btn faith-btn active">Donate</a> -->
+                        </div>
+                    </div>
+
+                    <!-- Single Donate Slide Area -->
+                    <div class="single-donate-slide">
+                        <img src="{% static 'img/mzi/spear.jpg' %}" alt="">
+                        <!-- Donate Content -->
+                        <div class="donate-content">
+                            <h4>The Traditional Shield</h4>
+                            <p>African Warrior's Guard</p>
+                        </div>
+                        <!-- Donate Button -->
+                       
+                    </div>
+
+                    <!-- Single Donate Slide Area -->
+                    <div class="single-donate-slide">
+                        <img src="{% static 'img/mzi/mzi_pic2.jpeg' %}" alt="">
+                        <!-- Donate Content -->
+                        <div class="donate-content">
+                            <!-- <h4>Child Found</h4>
+                            <p>For the kids</p> -->
+                        </div>
+                        <!-- Donate Button -->
+                        <div class="donate-btn text-center">
+                            <!-- <a href="#" class="btn faith-btn active">Donate</a> -->
+                        </div>
+                    </div>
+
+                    <!-- Single Donate Slide Area -->
+                    <div class="single-donate-slide">
+                        <img src="{% static 'img/mzi/mzi_pic1.jpeg' %}" alt="">
+                        <!-- Donate Content -->
+                        <div class="donate-content">
+                            <!-- <h4>Church Building</h4>
+                            <p>Renovate the Church</p> -->
+                        </div>
+                        <!-- Donate Button -->
+                        <!-- <div class="donate-btn text-center">
+                            <a href="#" class="btn faith-btn active">Donate</a>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Donate Area End ##### -->
 <!-- Services Ara End -->
 <!--? Testimonial Start -->
 <div class="testimonial-area testimonial-padding" data-background="assets/img/gallery/section_bg04.jpg">
@@ -137,53 +291,10 @@
                     <!-- Single Testimonial -->
                     <div class="single-testimonial text-center">
                         <!-- Testimonial Content -->
-                        <div class="testimonial-caption ">
-                            <div class="testimonial-top-cap">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                width="67px" height="49px">
-                                <path fill-rule="evenodd"  fill="rgb(240, 78, 60)"
-                                d="M57.053,48.209 L42.790,48.209 L52.299,29.242 L38.036,29.242 L38.036,0.790 L66.562,0.790 L66.562,29.242 L57.053,48.209 ZM4.755,48.209 L14.263,29.242 L0.000,29.242 L0.000,0.790 L28.527,0.790 L28.527,29.242 L19.018,48.209 L4.755,48.209 Z"/>
-                                </svg>
-                                <p> Testimonials and reviews  </p>
-                            </div>
-                            <!-- founder -->
-                            <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                                <div class="founder-img">
-                                    <img src="assets/img/gallery/Homepage_testi.png" alt="">
-                                </div>
-                                <div class="founder-text">
-                                    <span>Reviewer Name</span>
-                                    <p>Title or Designation</p>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                     <!-- Single Testimonial -->
-                    <div class="single-testimonial text-center">
-                        <!-- Testimonial Content -->
-                        <div class="testimonial-caption ">
-                            <div class="testimonial-top-cap">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                width="67px" height="49px">
-                                <path fill-rule="evenodd"  fill="rgb(240, 78, 60)"
-                                d="M57.053,48.209 L42.790,48.209 L52.299,29.242 L38.036,29.242 L38.036,0.790 L66.562,0.790 L66.562,29.242 L57.053,48.209 ZM4.755,48.209 L14.263,29.242 L0.000,29.242 L0.000,0.790 L28.527,0.790 L28.527,29.242 L19.018,48.209 L4.755,48.209 Z"/>
-                                </svg>
-                                <p>Testimonials, Reviews and Comments  </p>
-                            </div>
-                            <!-- founder -->
-                            <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                                <div class="founder-img">
-                                    <img src="assets/img/gallery/Homepage_testi.png" alt="">
-                                </div>
-                                <div class="founder-text">
-                                    <span>Reviewr Name</span>
-                                    <p>Title or Designation </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -191,40 +302,7 @@
 </div>
 <!-- Testimonial End -->
 <!-- Coun Down Start -->
-<div class="count-down-area pb-120">
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <!-- Counter Up -->
-                <div class="single-counter text-center">
-                    <span class="counter">100</span>
-                    <p>Number of reviews</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <!-- Counter Up -->
-                <div class="single-counter active text-center">
-                    <span class="counter">120</span>
-                    <p>Days to launch</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <!-- Counter Up -->
-                <div class="single-counter text-center">
-                    <span class="counter">200</span>
-                    <p>Testimonials </p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <!-- Counter Up -->
-                <div class="single-counter text-center">
-                    <span class="counter">500</span>
-                    <p>Copies sold</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <!-- Coun Down End -->
 
 
